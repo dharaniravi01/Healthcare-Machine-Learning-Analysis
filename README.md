@@ -131,11 +131,11 @@ Mortality, HIV/AIDS prevalence, education and socioeconomic indicators emerged a
 
 The ensemble models substantially outperformed the linear and regularised regression approaches. Random Forest achieved the highest test R² of approximately **0.97**, followed by Gradient Boosting at approximately **0.95**.
 
-![Life Expectancy Model R² Comparison](images/task2_model_r2_comparison(1).png)
+![Life Expectancy Model R² Comparison](images/task2_model_r2_comparison.png)
 
 The Random Forest predictions closely follow the actual life expectancy values, illustrating the model's strong predictive fit on the test data.
 
-![Random Forest Actual vs Predicted](images/task2_rf_actual_vs_predicted(1).png)
+![Random Forest Actual vs Predicted](images/task2_rf_actual_vs_predicted.png)
 
 ### 3. Diabetes Risk Classification
 
