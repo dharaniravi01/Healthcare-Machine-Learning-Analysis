@@ -91,15 +91,15 @@ K-Means clustering was evaluated using the elbow method and silhouette analysis,
 
 The PCA scree plot shows how the explained variance is distributed across the principal components, with the first two components accounting for approximately **66% of total variance**.
 
-![PCA Scree Plot](images/PCAscreeplot(2).png)
+![PCA Scree Plot](images/PCAscreeplot.png)
 
 The countries were then grouped using K-Means clustering with three clusters in the PCA feature space.
 
-![K-Means Clustering](images/finalcluster(1).png)
+![K-Means Clustering](images/finalcluster.png)
 
 Examining the standardised feature means of each cluster highlights differences in healthcare outcomes, demographic characteristics and economic indicators across the three country groups.
 
-![Cluster Profiles](images/cluster_standard_means(1).png)
+![Cluster Profiles](images/cluster_standard_means.png)
 
 ### 2. Life Expectancy Prediction
 
