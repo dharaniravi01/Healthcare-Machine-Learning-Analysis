@@ -36,8 +36,6 @@ A dataset containing **768 observations** and 8 clinical predictors including gl
 
 **Target:** Diabetes status
 
-> Dataset links will be provided in the Data Sources section below.
-
 ## Technologies & Techniques
 
 **Language & Libraries**
@@ -89,6 +87,20 @@ The first two principal components explained approximately **66% of total varian
 
 K-Means clustering was evaluated using the elbow method and silhouette analysis, resulting in a **three-cluster solution** representing different patterns of healthcare capacity, economic development and demographic scale.
 
+#### PCA and Clustering Results
+
+The PCA scree plot shows how the explained variance is distributed across the principal components, with the first two components accounting for approximately **66% of total variance**.
+
+![PCA Scree Plot](images/PCAscreeplot(2).png)
+
+The countries were then grouped using K-Means clustering with three clusters in the PCA feature space.
+
+![K-Means Clustering](images/finalcluster(1).png)
+
+Examining the standardised feature means of each cluster highlights differences in healthcare outcomes, demographic characteristics and economic indicators across the three country groups.
+
+![Cluster Profiles](images/cluster_standard_means(1).png)
+
 ### 2. Life Expectancy Prediction
 
 Multiple regression approaches were compared:
@@ -115,6 +127,16 @@ Mortality, HIV/AIDS prevalence, education and socioeconomic indicators emerged a
 
 > The high ensemble-model performance should be interpreted cautiously because repeated country-year observations were randomly divided between the training and test sets. A country-level split would provide a stricter test of generalisation.
 
+#### Model Performance
+
+The ensemble models substantially outperformed the linear and regularised regression approaches. Random Forest achieved the highest test R² of approximately **0.97**, followed by Gradient Boosting at approximately **0.95**.
+
+![Life Expectancy Model R² Comparison](images/task2_model_r2_comparison(1).png)
+
+The Random Forest predictions closely follow the actual life expectancy values, illustrating the model's strong predictive fit on the test data.
+
+![Random Forest Actual vs Predicted](images/task2_rf_actual_vs_predicted(1).png)
+
 ### 3. Diabetes Risk Classification
 
 Five classification algorithms were compared:
@@ -131,16 +153,29 @@ Feature importance analysis consistently identified **glucose, BMI and age** amo
 
 The results also demonstrate that more complex models do not necessarily outperform simpler models for every prediction problem.
 
+#### Classification Performance
+
+ROC analysis shows that all five classification models performed better than random classification. Logistic Regression achieved the highest ROC-AUC at approximately **0.824**, closely followed by Random Forest and Gradient Boosting.
+
+![Diabetes Classification ROC Curves](images/task3_roc_curves.png)
+
+#### Feature Importance
+
+Random Forest feature importance identified **glucose** as the strongest predictor of diabetes status, followed by BMI, age and the diabetes pedigree function.
+
+![Diabetes Random Forest Feature Importance](images/task3_rf_importance.png)
+
 ## Repository Contents
 
 - `healthcare_machine_learning_analysis.ipynb` — Complete Python implementation covering clustering, regression and classification
+- `images/` — Visualisations of key clustering, regression and classification results
 - `README.md` — Project overview, methodology and key findings
-
+  
 ## 🔗 Data Sources
 
-- Global Country Information 2023 — Kaggle
-- Life Expectancy (WHO) — Kaggle
-- Pima Indians Diabetes Dataset — Kaggle
+- [Global Country Information 2023](https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023)
+- [Life Expectancy (WHO)](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who)
+- [Pima Indians Diabetes Dataset](https://www.kaggle.com/datasets/jamaltariqcheema/pima-indians-diabetes-dataset)
 
 ## Skills Demonstrated
 
